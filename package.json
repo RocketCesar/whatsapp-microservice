@@ -1,0 +1,16 @@
+{
+  "name": "whatsapp-microservice",
+  "version": "1.0.0",
+  "description": "Microserviço de envio WhatsApp para recuperação de senha WordPress",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "whatsapp-web.js": "^1.26.0",
+    "qrcode-terminal": "^0.12.0",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5"
+  }
+}
