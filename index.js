@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 const client = new Client({
     authStrategy: new LocalAuth({ clientId: "recupera_senha" }),
     puppeteer: {
-        browserWSEndpoint: 'ws://localhost:3000', // Conecta ao Chrome Headless do Docker browserless/chrome
+        executablePath: '/usr/bin/chromium-browser', // Caminho do Chromium instalado no sistema
         args: ['--no-sandbox', '--disable-setuid-sandbox']
     }
 });
