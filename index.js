@@ -14,7 +14,6 @@ app.use(bodyParser.json());
 const client = new Client({
     authStrategy: new LocalAuth({ clientId: "recupera_senha" }),
     puppeteer: {
-        executablePath: '/usr/bin/chromium-browser', // Caminho do Chromium instalado no sistema
         args: ['--no-sandbox', '--disable-setuid-sandbox']
     }
 });
@@ -23,7 +22,7 @@ let whatsappReady = false;
 
 client.on('qr', (qr) => {
     console.log('\n--- Escaneie este QR code no WhatsApp ---\n');
-    qrcode.generate(qr, { small: true });
+    qrcode.generate(qr, { small: false });
     console.log('\nOu copie o QR para outro gerador online.\n');
 });
 
